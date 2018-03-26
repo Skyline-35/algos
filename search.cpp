@@ -12,9 +12,20 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-int linearSearch(auto data, auto key);//prototype
-
-
+int linearSearch(auto data, auto key)//prototype
+{
+	int low = 0, high = data.size()-1;
+	int mid = (high + low)/2;
+	
+	for (int i = 0; i < data.size(); i++)
+	{
+		if (data[i] == key)
+		{
+			return i;
+        }
+    }
+    return -1;
+}
 int main()
 {
   vector<string> inputs;
