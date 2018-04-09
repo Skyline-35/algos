@@ -24,7 +24,7 @@ void insertSort (auto data)
 		while(moveItem > 0 && data[moveItem -1] > inputs)
 		{
 			data[moveItem] = data[moveItem -1];
-			moveItem;
+			moveItem ;
 		}
 		data[moveItem] = inputs;
 	}
@@ -63,21 +63,7 @@ int main()
 
    cin>>search_key;
  
-    while(search_key != "#")//perform searches until sentinel entered
-    {
-        result = insertSort(inputs,search_key);
-
-        cout<<"  '"<<search_key<<"' was ";
-
-        if (result == -1)
-          cout<<"not found";
-        else
-          cout<<"found at index "<<result;
-
-
-        cout<<endl<<endl<<"Enter a value to search for: ";
-        cin>>search_key; 
-    }
+    
 
    cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
 
